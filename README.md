@@ -1,2 +1,2 @@
-# api2api
-api2api is a small tool which may quickly provider a converted api response from another existing api
+# restful2restful
+restful2restful is a small tool which may quickly provider a converted api response from another existing api
