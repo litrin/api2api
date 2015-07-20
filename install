@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Begin to deploy PNCView"
+
+sudo apt-get update
+sudo apt-get install python-tornado
+
+status=$?
+
+if [ $status -eq "0" ]
+then
+	exec ./start
+else
+	echo "Install tornado fail, you should manuelly install pyhon & tornado"
+	echo "Please read: http://www.tornadoweb.org/en/stable/#installation"
+fi

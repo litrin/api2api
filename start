@@ -1,0 +1,23 @@
+#!/bin/bash
+
+api_url="http://127.0.0.1:8888"
+log="/var/log/api2api.log"
+port="80"
+
+path=`pwd`
+cd `dirname $0`
+./service.py --api_url=$api_url --log_file_prefix=$log --port=$port
+
+status=$?
+cd $path
+
+if [ $status -eq 0 ]
+then
+	echo "Service started"
+	exit 0
+else
+	echo "Service doesn't ready!"
+	exit 1
+fi
+
+
